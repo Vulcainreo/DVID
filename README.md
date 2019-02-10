@@ -24,7 +24,7 @@ The board is shipped with theses three packages :
 # Part list
 
 Part | Quantity | Total Cost | Buying link
---- | --- | ---
+--- | --- | --- | ---
 Board | 1 | 3€ | Available soon or build yourself :)
 Jumper Double Row Female 2x4P | 2 | 0,5€ | https://www.banggood.com/30pcs-2_54mm-2x4P-8P-Double-Row-Female-Straight-Pin-Header-Needle-Socket-Pin-Strip-p-1348262.html
 Jumper Single Row Male | 4 | 0,5€ | https://www.banggood.com/10Pcs-40-Pin-2_54mm-Male-Female-SIL-Socket-Row-Strip-PCB-Connector-p-953436.html
@@ -35,15 +35,15 @@ Atmega328p | 1 | 3€ | https://www.banggood.com/DIP28-ATmega328PPU-MCU-IC-Chip-
 5V to 3V power supply | 1 | 1€ | https://www.banggood.com/5V-To-3_3V-DC-DC-Step-Down-Power-Supply-Buck-Module-AMS1117-800MA-p-933674.html
 16Mhz resonator | 1 | 0,5€ | https://www.banggood.com/10Pcs-HC-49S-16MHz-16-MHz-16M-Hz-16_000M-Mini-Passive-Resonator-Quartz-Crystal-Oscillator-p-1096168.html
 Status led | 1 | 0,5€ | https://www.banggood.com/10pcs-5mm-3000-6000mcd-LED-Bright-Decoration-Torch-Toy-Light-Green-p-73175.html
-Total | - | 15€ | -
+Total |  | 15€ |
 
 # Attack tools and extention board
 
 Part | Quantity | Total Cost | Buying link
---- | --- | ---
+--- | --- | --- | ---
 UsbUART | 1 | 3€ |  https://www.banggood.com/CP2102-USB-To-TTL-Module-p-1263924.html?rmmds=myorder&cur_warehouse=CN
 UsbASP + 6P adapter | 1 | 4€ | https://www.banggood.com/3_3V-5V-USBASP-USBISP-AVR-Programmer-Downloader-ATMEGA8-ATMEGA128-With-Download-Cable-p-1179967.html
 JDY-18 BLE module | 1 | 4€ | https://www.banggood.com/JDY-18-Bluetooth-Module-4_2-High-Speed-Transmission-BLE-Mesh-Networking-Master-Slave-Integration-p-1324896.html
 CSR BLE adapter | 1 | 4€ | https://www.banggood.com/Mini-Wireless-Dongle-CSR-4_0-Bluetooth-Adapter-V4_0-USB-2_03_0-For-Win-7810XP-For-Vista-3264-p-1132661.html
 Jumper Wire female female | 1 | 2€ | https://www.banggood.com/120pcs-20cm-Male-To-Female-Female-To-Female-Male-To-Male-Color-Breadboard-Jumper-Cable-Dupont-Wire-Combination-For-Arduino-p-974006.html
-Total | - | 18€ | -
+Total |  | 18€ |
