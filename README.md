@@ -3,6 +3,8 @@ Damn Vulnerable IoT Device - The first opensource vulnerable designed IoT device
 
 **/!\\ This project is currently in development /!\\**
 
+All details are available on DVID website : [http://dvid.eu](http://dvid.eu)
+
 # Project overview
 
 This IoT device is designed by my own and published on OpenSource. The main objective is to provide to each interrested people a vulnerable board to improve their skill in IoT hacking.
