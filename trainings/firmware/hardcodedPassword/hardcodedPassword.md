@@ -1,15 +1,13 @@
 # Hardcoded password training
-## Objective
+## Goal
+A confidential message is stored on the firmware but protected by a password.
 
-In this training you need to enter over serial connection a password.
-As you get on Internet, the password seems to be hardcoded into the firmware. Maybe, after a firmware extraction, you should take it.
+## Guidelines
+* Extract the firmware
+* Locate the password
+* Write the password over the UART connection
 
 NB : Nothing will be print on the serial (just RX is configured)
 
-## Screen
-
-The following screen should be  available
-
 ## Result
-
-The hardcoded password is : Th1sIsAv3rySTRONGp4ssw0rD
+The password is an animal name.

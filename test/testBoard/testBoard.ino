@@ -59,7 +59,8 @@ void setup()
   wifi.begin(115200);
 
   wifi.println("AT");
-  printScreen(wifi.readString(),"");
+  wifi.println("AT+CWMODE=2");
+  wifi.println("AT+CWSAP_CUR=\"DVID-TESTING\",\"aaa\",5,0");
 }
 
 void loop() {}

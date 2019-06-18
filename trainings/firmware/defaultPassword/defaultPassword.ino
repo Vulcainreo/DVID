@@ -15,8 +15,8 @@
 #define OLED_RESET     -1 // Reset pin # (or -1 if sharing Arduino reset pin)
 Adafruit_SSD1306 display(OLED_RESET);
 
-String password = "sup3rp4ssw0rd";
-String message = "T5uzzrhz4tf23lsccbes1111";
+String password = "password";
+String message = "R5azzbhz4bf23isccbts1111";
 String currentPassword = "";
 bool finished = false;
 String rx = "";
@@ -28,8 +28,8 @@ void printScreen(String text, String progress) {
   display.clearDisplay();
 
   display.setCursor(0,0);
-  //               xxxxxxxxxxxxxxxxxxxxx
-  display.println("T03 Hard.Pass.   "+progress+"%"); //first line - only 21 chars
+  //               xxxxxxxxxxxxxxxxx     xxxx
+  display.println("T04 Default.Pass."+progress+"%"); //first line - only 21 chars
   display.drawLine(0,7,128,7,WHITE);
 
   display.setCursor(0,10);
@@ -75,11 +75,13 @@ void setup()
         currentPassword.trim();
         printScreen("Pass : "+currentPassword, " 50");
         first = false;
+        Serial.println("ko");
         delay(2000);
       }
     }
     else
     {
+      Serial.println("ok");
       printScreen("Well done! Message : "+m,"100");
       finished = true;
     }
