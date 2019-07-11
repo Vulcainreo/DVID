@@ -72,17 +72,13 @@ Total |  | 15€ |
 
 Part | Quantity | Total Cost | Buying link
 --- | --- | --- | ---
-UsbUART | 1 | 3€ |  https://www.banggood.com/CP2102-USB-To-TTL-Module-p-1263924.html?rmmds=myorder&cur_warehouse=CN
+UsbUART | 1 | 3€ |  https://www.banggood.com/CP2102-USB-To-TTL-Module-p-1263924.html
 UsbASP adapter | 1 | 4€ | https://www.banggood.com/3_3V-5V-USBASP-USBISP-AVR-Programmer-Downloader-ATMEGA8-ATMEGA128-With-Download-Cable-p-1179967.html
-AT-09 BLE module | 1 | 2€ | https://www.banggood.com/AT-09-4_0-BLE-Wireless-bluetooth-Module-Serial-Port-CC2541-Compatible-HM-10-Module-Connecting-Single-Chip-Microcomputer-p-1455191.html?rmmds=search
+AT-09 BLE module | 1 | 2€ | https://www.banggood.com/AT-09-4_0-BLE-Wireless-bluetooth-Module-Serial-Port-CC2541-Compatible-HM-10-Module-Connecting-Single-Chip-Microcomputer-p-1455191.html
 CSR BLE adapter | 1 | 4€ | https://www.banggood.com/Mini-Wireless-Dongle-CSR-4_0-Bluetooth-Adapter-V4_0-USB-2_03_0-For-Win-7810XP-For-Vista-3264-p-1132661.html
 Jumper Wire female female | 1 | 2€ | https://www.banggood.com/120pcs-20cm-Male-To-Female-Female-To-Female-Male-To-Male-Color-Breadboard-Jumper-Cable-Dupont-Wire-Combination-For-Arduino-p-974006.html
-<<<<<<< HEAD
-Total |  | 15€ |
-=======
-ESP8266| 1 | | 
-Total |  | 18€ |
+ESP8266 | 1 | 2€ | https://www.banggood.com/Upgraded-Version-1M-Flash-ESP8266-ESP-01-WIFI-Transceiver-Wireless-Module-p-979509.html
+Total |  | 17€ |
+
 
 ![](./images/kit-contents.jpg)
-
->>>>>>> 325e2f33da9f0ae5397241e9bef9fe7adc5790b5
