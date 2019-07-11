@@ -6,8 +6,9 @@ A confidential message is stored on the firmware but protected by a password.
 * Extract the firmware
 * Locate the password
 * Write the password over the UART connection
+* Get the flag
 
-NB : Nothing will be print on the serial (just RX is configured)
+NB : Nothing will be printed on the serial (just RX is configured)
 
 ## Result
-The password is an animal name.
+The flag is an animal's name.
