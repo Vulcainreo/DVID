@@ -24,7 +24,7 @@ void printScreen(String text, String progress) {
 
   display.setCursor(0,0);
   //               xxxxxxxxxxxxxxxxx"+progress+"x
-  display.println("T2-CHARACT......."+progress+"%"); //first line - only 21 chars
+  display.println("T1-ADVERTISING   "+progress+"%"); //first line - only 21 chars
   display.drawLine(0,7,120,7,WHITE);
 
   display.setCursor(0,8);
@@ -66,6 +66,8 @@ void setup()
     ; // wait for serial port to connect. Needed for native USB port only
   }
 
+  currentPassword = "";
+
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
 
  // Display Text
@@ -75,12 +77,36 @@ void setup()
   display.setTextColor(WHITE); // Draw white text
   display.cp437(true);         // Use full 256 char 'Code Page 437' font
 
-  printScreen("Verbose mode = 1 on 0000ffe1","  0");  
-  
+  String m = String(message[0])+String(message[2])+String(message[5])+String(message[9]);
+  printScreen("I have confidential message. Pass ?", "  0");
+
+  while(!finished) {
+
+    if (currentPassword != bluetoothName) {
+
+      if (!first) {
+        printScreen("Wrong password\nTry again", " 50");
+        currentPassword = "";
+      }
+
+      if (Serial.available() > 0) {
+
+        rx = Serial.readString();
+        currentPassword = currentPassword + rx;
+        currentPassword.trim();
+        printScreen("Pass : "+currentPassword, " 50");
+        first = false;
+        delay(2000);
+      }
+    }
+    else
+    {
+      printScreen("Well done! Message : "+m,"100");
+      finished = true;
+    }
+
+
+  }
 }
 
-void loop() {
-    ble.println("Password : Cow");
-    delay(5000);
-    printScreen("Something is leaking on 0000ffe1"," 50");
-  }
+void loop() { }

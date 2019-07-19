@@ -7,12 +7,13 @@
 
 
 Adafruit_SSD1306 display(-1);
-String message = "D5uzzcrz4kf23fk";
+String message = "B5izzrrz4df23fk";
 String currentPassword = "";
 bool finished = false;
 String rx = "";
 bool first = true;
 String bluetoothName = "";
+String password = "hello";
 int name = 0;
 SoftwareSerial ble(7,6);
 
@@ -24,7 +25,7 @@ void printScreen(String text, String progress) {
 
   display.setCursor(0,0);
   //               xxxxxxxxxxxxxxxxx"+progress+"x
-  display.println("T2-CHARACT......."+progress+"%"); //first line - only 21 chars
+  display.println("T3-CHARACT2......"+progress+"%"); //first line - only 21 chars
   display.drawLine(0,7,120,7,WHITE);
 
   display.setCursor(0,8);
@@ -75,12 +76,38 @@ void setup()
   display.setTextColor(WHITE); // Draw white text
   display.cp437(true);         // Use full 256 char 'Code Page 437' font
 
-  printScreen("Verbose mode = 1 on 0000ffe1","  0");  
+  printScreen("Come on to say hello on 0000ffe1","  0");
+
+  String m = String(message[0])+String(message[2])+String(message[5])+String(message[9]);
+  ble.readString();
+  
+  while(!finished) {
+
+    if (currentPassword != password) {
+
+      if (!first) {
+        printScreen("Wrong password\nTry again", " 50");
+        currentPassword = "";
+      }
+      rx = ble.readString();
+      if (rx != "") {
+        currentPassword = currentPassword + rx;
+        currentPassword.trim();
+        printScreen("Entered pass : "+currentPassword, " 50");
+        first = false;
+        delay(2000);
+      }
+    }
+    else
+    {
+      printScreen("Well done! Message : "+m,"100");
+      finished = true;
+    }
+
+
+  }
   
 }
 
 void loop() {
-    ble.println("Password : Cow");
-    delay(5000);
-    printScreen("Something is leaking on 0000ffe1"," 50");
   }

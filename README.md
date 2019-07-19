@@ -54,6 +54,11 @@ atmega328bb.bootloader.tool=arduino:avrdude
 atmega328bb.upload.tool=arduino:avrdude
 ```
 
+# Write-up
+* findTheDatasheet - EN - http://blog.ghozt.ninja/2019/07/19/findthedatasheet/
+* findTheDatasheet - FR - https://shoxxdj.fr/dvid-hardware-find-the-datasheet/
+
+
 # Part list
 
 Part | Quantity | Total Cost | Buying link
@@ -81,4 +86,4 @@ ESP8266 | 1 | 2€ | https://www.banggood.com/Upgraded-Version-1M-Flash-ESP8266-
 Total |  | 17€ |
 
 
-![](./images/kit-contents.jpg)
+![](./kit-contents.jpg)
