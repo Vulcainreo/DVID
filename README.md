@@ -57,6 +57,7 @@ atmega328bb.upload.tool=arduino:avrdude
 # Write-up
 * findTheDatasheet - EN - http://blog.ghozt.ninja/2019/07/19/findthedatasheet/
 * findTheDatasheet - FR - https://shoxxdj.fr/dvid-hardware-find-the-datasheet/
+* defaultPassword - FR - https://shoxxdj.fr/dvid-firmware-defaultpassword/
 
 
 # Part list
