@@ -58,6 +58,7 @@ atmega328bb.upload.tool=arduino:avrdude
 * findTheDatasheet - EN - http://blog.ghozt.ninja/2019/07/19/findthedatasheet/
 * findTheDatasheet - FR - https://shoxxdj.fr/dvid-hardware-find-the-datasheet/
 * defaultPassword - FR - https://shoxxdj.fr/dvid-firmware-defaultpassword/
+* Bluetooth characteristic2 - EN - https://rayenmessaoudi.github.io/dvid-bluetooth-characteristic2/
 
 
 # Part list
