@@ -58,7 +58,6 @@ atmega328bb.upload.tool=arduino:avrdude
 * findTheDatasheet - EN - http://blog.ghozt.ninja/2019/07/19/findthedatasheet/
 * findTheDatasheet - FR - https://shoxxdj.fr/dvid-hardware-find-the-datasheet/
 * defaultPassword - FR - https://shoxxdj.fr/dvid-firmware-defaultpassword/
-* Bluetooth characteristic2 - EN - https://rayenmessaoudi.github.io/dvid-bluetooth-characteristic2/
 
 
 # Part list
@@ -89,3 +88,28 @@ Total |  | 17€ |
 
 
 ![](./kit-contents.jpg)
+
+
+# Troubleshooting
+In case of frying your board, you may encounter some issue with new version of chinese component. This part is dedicated to allow you to start to discuss with your component and put it in the ready-to-hack configuration
+
+## Bluetooth AT-09
+Last received parcel contains a new version of the AT-09, named MLT-BT05. This new version natively discuss over UART with 115200 baudrate.
+The DVID can discuss to peripherial with 9600 baudrate.
+In order to change that, follow those steps:
+* Connect your AT-09 to your uart dongle : RX>TX, TX>RX, VCC>VCC and Gnd>Gnd
+* Open a serial monitor and type : AT+BAUD4
+* If you receive "OK", your BLE peripherial is ready-to-hack
+
+## Atmega328p
+Last received parcel contains a new version of Atmega328p. This version seems to be virgin and allow communication with very slow SCK.
+In order to modify the internal configuration (fuse), follow those steps:
+* Solder (or shortcut) the Jumper #3 on the USBasp flashing dongle
+* Type this command to be sure that you can communicates with the broken Atmega328p : avrdude -v -patmega328p -cusbasp
+* If you receive "hfuse reads D9" and "lfuse reads FF", your device is already ready-to-hack
+* If not, type this command : avrdude -v -patmega328p -U lfuse:w:0xE2:m -cusbasp
+* You can type again avrdude -v -patmega328p -cusbasp to be sure that fuse configuration changed
+
+You can not unsolder or remove shortcut on the Jumper #3. If you don't remove it, flashing process will take 20 more times.
+You can now flash all firmware on you DVID !
+

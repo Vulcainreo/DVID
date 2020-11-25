@@ -48,10 +48,15 @@ void setup()
   ble.begin(9600);
 
   ble.println("AT+ROLE0");
+  delay(1000);
   ble.println("AT+UUID0xFFE0");
+  delay(1000);
   ble.println("AT+CHAR0xFFE1");
+  delay(1000);
   ble.println("AT+NAMEDVID-TESTING");
+  delay(1000);
   ble.println("AT+RESET");
+  delay(1000);
 
   printScreen("Testing BLE", "  60");
 
