@@ -55,9 +55,22 @@ atmega328bb.upload.tool=arduino:avrdude
 ```
 
 # Write-up
-* findTheDatasheet - EN - http://blog.ghozt.ninja/2019/07/19/findthedatasheet/
-* findTheDatasheet - FR - https://shoxxdj.fr/dvid-hardware-find-the-datasheet/
-* defaultPassword - FR - https://shoxxdj.fr/dvid-firmware-defaultpassword/
+Many thanks to @ghozt, @shoxxdj and @podalirius
+
+## Hardware
+* Find The Datasheet - EN - http://blog.ghozt.ninja/2019/07/19/findthedatasheet/
+* Find The Datasheet - FR - https://shoxxdj.fr/dvid-hardware-find-the-datasheet/
+* Find The Datasheet - EN - https://podalirius.net/writeups/dvid-writeup-01-hardware-find-the-datasheet/
+
+## Firmware
+* Hardcoded Password - EN - https://podalirius.net/writeups/dvid-writeup-02-firmware-hardcoded-password/
+* Default Password - FR - https://shoxxdj.fr/dvid-firmware-defaultpassword/
+* Default Password - EN - https://podalirius.net/writeups/dvid-writeup-03-firmware-default-password/
+
+## Bluetooth
+* Advertising - EN - https://podalirius.net/writeups/dvid-writeup-04-bluetooth-advertise/
+* Characteristics - EN - https://podalirius.net/writeups/dvid-writeup-05-bluetooth-characteristics/
+* Characteristics2 - EN - https://podalirius.net/writeups/dvid-writeup-06-bluetooth-characteristics2/
 
 
 # Part list
