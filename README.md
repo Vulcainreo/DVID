@@ -1,7 +1,7 @@
 # DVID
 Damn Vulnerable IoT Device - The first opensource vulnerable designed IoT device
 
-**/!\\ This project is currently in development /!\\**
+**⚠️ This project is currently in development ⚠️**
 
 All details are available on DVID website : [http://dvid.eu](http://dvid.eu)
 
@@ -24,9 +24,11 @@ The board is shipped with theses three packages :
 * **Full package** : Everything needed (soldered board, external board and attack tools).
 
 # Contribution
+
 If you want to contribute to the project, don't hesitate to open a pull request.
 By the way, about firmware compilation, you need to compile for atmega328p breadboard 8mhz.
 In order to do that, just add this board to the /arduino/hardware/arduino/avr/board.txt file
+
 ```bash
 ##############################################################
 
@@ -54,24 +56,44 @@ atmega328bb.bootloader.tool=arduino:avrdude
 atmega328bb.upload.tool=arduino:avrdude
 ```
 
-# Write-up
-Many thanks to @ghozt, @shoxxdj and @podalirius
+# Write-ups
 
-## Hardware
-* Find The Datasheet - EN - http://blog.ghozt.ninja/2019/07/19/findthedatasheet/
-* Find The Datasheet - FR - https://shoxxdj.fr/dvid-hardware-find-the-datasheet/
-* Find The Datasheet - EN - https://podalirius.net/writeups/dvid-writeup-01-hardware-find-the-datasheet/
+Many thanks to [@ghozt](https://twitter.com/ghozt), [@shoxxdj](https://twitter.com/shoxxdj) and [@podalirius](https://twitter.com/podalirius)
 
-## Firmware
-* Hardcoded Password - EN - https://podalirius.net/writeups/dvid-writeup-02-firmware-hardcoded-password/
-* Default Password - FR - https://shoxxdj.fr/dvid-firmware-defaultpassword/
-* Default Password - EN - https://podalirius.net/writeups/dvid-writeup-03-firmware-default-password/
+## In french 🇫🇷
 
-## Bluetooth
-* Advertising - EN - https://podalirius.net/writeups/dvid-writeup-04-bluetooth-advertise/
-* Characteristics - EN - https://podalirius.net/writeups/dvid-writeup-05-bluetooth-characteristics/
-* Characteristics2 - EN - https://podalirius.net/writeups/dvid-writeup-06-bluetooth-characteristics2/
+### Hardware
 
+* Find The Datasheet - [https://shoxxdj.fr/dvid-hardware-find-the-datasheet/](https://shoxxdj.fr/dvid-hardware-find-the-datasheet/)
+* Find The Datasheet - [https://podalirius.net/fr/writeups/dvid-writeup-01-hardware-find-the-datasheet/](https://podalirius.net/fr/writeups/dvid-writeup-01-hardware-find-the-datasheet/)
+
+### Firmware
+
+* Default Password - [https://shoxxdj.fr/dvid-firmware-defaultpassword/](https://shoxxdj.fr/dvid-firmware-defaultpassword/)
+* Default Password - [https://podalirius.net/fr/writeups/dvid-writeup-03-firmware-default-password/](https://podalirius.net/fr/writeups/dvid-writeup-03-firmware-default-password/)
+
+### Bluetooth
+
+* Advertising - [https://podalirius.net/fr/writeups/dvid-writeup-04-bluetooth-advertise/](https://podalirius.net/fr/writeups/dvid-writeup-04-bluetooth-advertise/)
+* Characteristics - [https://podalirius.net/fr/writeups/dvid-writeup-05-bluetooth-characteristics/](https://podalirius.net/fr/writeups/dvid-writeup-05-bluetooth-characteristics/)
+* Characteristics2 - [https://podalirius.net/fr/writeups/dvid-writeup-06-bluetooth-characteristics2/](https://podalirius.net/fr/writeups/dvid-writeup-06-bluetooth-characteristics2/)
+
+## In english 🇬🇧
+
+### Hardware
+
+* Find The Datasheet - [https://podalirius.net/en/writeups/dvid-writeup-01-hardware-find-the-datasheet/](https://podalirius.net/en/writeups/dvid-writeup-01-hardware-find-the-datasheet)
+
+### Firmware
+
+* Hardcoded Password - [https://podalirius.net/en/writeups/dvid-writeup-02-firmware-hardcoded-password/](https://podalirius.net/en/writeups/dvid-writeup-02-firmware-hardcoded-password/)
+* Default Password - [https://podalirius.net/en/writeups/dvid-writeup-03-firmware-default-password/](https://podalirius.net/en/writeups/dvid-writeup-03-firmware-default-password/)
+
+### Bluetooth
+
+* Advertising - [https://podalirius.net/en/writeups/dvid-writeup-04-bluetooth-advertise/](https://podalirius.net/en/writeups/dvid-writeup-04-bluetooth-advertise/)
+* Characteristics - [https://podalirius.net/en/writeups/dvid-writeup-05-bluetooth-characteristics/](https://podalirius.net/en/writeups/dvid-writeup-05-bluetooth-characteristics/)
+* Characteristics2 - [https://podalirius.net/en/writeups/dvid-writeup-06-bluetooth-characteristics2/](https://podalirius.net/en/writeups/dvid-writeup-06-bluetooth-characteristics2/)
 
 # Part list
 
@@ -104,9 +126,11 @@ Total |  | 17€ |
 
 
 # Troubleshooting
+
 In case of frying your board, you may encounter some issue with new version of chinese component. This part is dedicated to allow you to start to discuss with your component and put it in the ready-to-hack configuration
 
 ## Bluetooth AT-09
+
 Last received parcel contains a new version of the AT-09, named MLT-BT05. This new version natively discuss over UART with 115200 baudrate.
 The DVID can discuss to peripherial with 9600 baudrate.
 In order to change that, follow those steps:
@@ -115,13 +139,14 @@ In order to change that, follow those steps:
 * If you receive "OK", your BLE peripherial is ready-to-hack
 
 ## Atmega328p
+
 Last received parcel contains a new version of Atmega328p. This version seems to be virgin and allow communication with very slow SCK.
 In order to modify the internal configuration (fuse), follow those steps:
 * Solder (or shortcut) the Jumper #3 on the USBasp flashing dongle
-* Type this command to be sure that you can communicates with the broken Atmega328p : avrdude -v -patmega328p -cusbasp
+* Type this command to be sure that you can communicates with the broken Atmega328p : `avrdude -v -patmega328p -cusbasp`
 * If you receive "hfuse reads D9" and "lfuse reads FF", your device is already ready-to-hack
-* If not, type this command : avrdude -v -patmega328p -U lfuse:w:0xE2:m -cusbasp
-* You can type again avrdude -v -patmega328p -cusbasp to be sure that fuse configuration changed
+* If not, type this command : `avrdude -v -patmega328p -U lfuse:w:0xE2:m -cusbasp`
+* You can type again `avrdude -v -patmega328p -cusbasp` to be sure that fuse configuration changed
 
 You can not unsolder or remove shortcut on the Jumper #3. If you don't remove it, flashing process will take 20 more times.
 You can now flash all firmware on you DVID !
