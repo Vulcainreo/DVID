@@ -56,6 +56,8 @@ atmega328bb.bootloader.tool=arduino:avrdude
 atmega328bb.upload.tool=arduino:avrdude
 ```
 
+In order to upload, select "USBAsp" in `Tool -> Programmer` and start the upload using `Sketch -> Upload Using Programmer`
+
 # Write-ups
 
 Many thanks to [@ghozt](https://twitter.com/ghozt), [@shoxxdj](https://twitter.com/shoxxdj) and [@podalirius](https://twitter.com/podalirius)
