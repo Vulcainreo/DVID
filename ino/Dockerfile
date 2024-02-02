@@ -1,7 +1,7 @@
-FROM alpine
+FROM ubuntu
 
-RUN apk update
-RUN apk add xz
+RUN apt update
+RUN apt install -y xz-utils
 COPY arduino-1.8.16.tar.xz /
 
 RUN xz -d arduino-1.8.16.tar.xz
@@ -18,6 +18,5 @@ COPY Adafruit_BusIO /opt/arduino-1.8.16/libraries/Adafruit_BusIO/
 
 COPY build.sh /
 RUN chmod +x /build.sh
-
 CMD ["sh", "-c", "./build.sh"]
 # CMD ["tail", "-f", "/dev/null"]
