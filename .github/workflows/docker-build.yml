@@ -1,0 +1,36 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["*"]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 5'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        lfs: 'true'
+        fetch-depth: 0
+
+    - name: Setup
+      run: |
+        mkdir -p src
+        cp ./trainings/hardware/trace/sketch.ino src/
+
+    - name: Build the Docker image
+      run: |
+        cd ino/
+        docker build . -t dvid-ino
+
+    - name: Run the Docker image
+      run: docker run -v $(pwd)/src:/build/src -v $(pwd)/build:/build/build  dvid-ino
